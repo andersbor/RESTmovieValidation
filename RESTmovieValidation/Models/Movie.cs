@@ -2,6 +2,7 @@
 
 namespace RESTmovieValidation.Models
 {
+    // https://github.com/dotnet/AspNetCore.Docs/blob/main/aspnetcore/mvc/models/validation/samples/6.x/ValidationSample/Models/Movie.cs
     public class Movie
     {
         public int Id { get; set; }
@@ -25,5 +26,8 @@ namespace RESTmovieValidation.Models
         //public Genre Genre { get; set; }
 
         public bool Preorder { get; set; }
+
+        override
+        public string ToString() { return Id + " " + Title + " " + Price; }
     }
 }
